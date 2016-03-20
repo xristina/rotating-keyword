@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Thin), url("../font/roboto/Roboto-Thin.eot");
+    src: url("../font/roboto/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../font/roboto/Roboto-Thin.woff2") format("woff2"), url("../font/roboto/Roboto-Thin.woff") format("woff"), url("../font/roboto/Roboto-Thin.ttf") format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Light), url("../font/roboto/Roboto-Light.eot");
+    src: url("../font/roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local(Roboto Regular), url("../font/roboto/Roboto-Regular.eot");
+    src: url("../font/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../font/roboto/Roboto-Regular.woff2") format("woff2"), url("../font/roboto/Roboto-Regular.woff") format("woff"), url("../font/roboto/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/roboto/Roboto-Medium.eot");
+    src: url("../font/roboto/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../font/roboto/Roboto-Medium.woff2") format("woff2"), url("../font/roboto/Roboto-Medium.woff") format("woff"), url("../font/roboto/Roboto-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../font/roboto/Roboto-Bold.eot");
+    src: url("../font/roboto/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../font/roboto/Roboto-Bold.woff2") format("woff2"), url("../font/roboto/Roboto-Bold.woff") format("woff"), url("../font/roboto/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+html,
+body {
+    background: #f5f5f5;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.content {
+    text-align: center;
+    max-width: 1115px;
+    margin: 0 auto;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-weight: 200;
+}
+
+p {
+	margin: 20px 0;
+	font-size: 23px;
+}
+
+em {
+	color: #0099CC;
+	font-weight: 300;
+	font-style: normal;
+}
+
+h1 + p {
+	margin-top: 40px;
+}
+
+
+#hero .left-text,
+#hero .right-text{
+    position: relative;
+    z-index: 5;
+	text-shadow: 0.03em 0 #f5f5f5,-0.03em 0 #f5f5f5,0.05em 0 #f5f5f5,-0.05em 0 #f5f5f5,0.09em 0 #f5f5f5,-0.075em 0 #f5f5f5;
+
+}
+
+#rotating-list {
+    display: inline-block;
+    position: relative;
+    min-height: 0.9em;
+    vertical-align: baseline;
+    transition: all 500ms ease-in;
+    width: 3.3000000000000003em;
+}
+
+.rotating-item {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 10px;
+    -webkit-transform: perspective(100px) rotate3d(1, 0, 0, -180deg);
+    transform: perspective(100px) rotate3d(1, 0, 0, -180deg);
+    opacity: 0;
+    z-index: 0;
+    background-color: #f5f5f5;
+    transition: all 500ms ease-in;
+}
+
+.rotating-item.active {
+	border-bottom: 1px solid #bababa;
+    background-color: #f5f5f5;
+    opacity: 1;
+    color: inherit;
+    -webkit-transform: perspective(0px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective(0px) rotate3d(1, 0, 0, 0deg);
+    z-index: 2;
+}
+.rotating-item.next {
+    background-color: #f5f5f5;
+    -webkit-transform: perspective(100px) translate3d(-1px,-13px,0) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(100px) translate3d(-1px,-13px,0) rotate3d(1, 0, 0, 90deg);    
+    opacity: 0;
+    z-index: 1;
+}
+@media screen and (max-width: 840px) {
+	#rotating-list {
+		display: block;
+	    min-height: 0.9em;
+	    height: 1.5em;
+	    margin: 10px auto 0 auto;	    
+	}
+}
+
+
+
+
+
+
