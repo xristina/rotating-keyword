@@ -94,8 +94,9 @@ h1 + p {
     top: 0;
     border-bottom: 1px solid transparent;
     padding-bottom: 10px;
-    -webkit-transform: perspective(100px) rotate3d(1, 0, 0, -180deg);
-    transform: perspective(100px) rotate3d(1, 0, 0, -180deg);
+    perspective: 100px;
+    -webkit-transform: rotate3d(1, 0, 0, -180deg);
+    transform: rotate3d(1, 0, 0, -180deg);
     opacity: 0;
     z-index: 0;
     background-color: #f5f5f5;
@@ -107,14 +108,16 @@ h1 + p {
     background-color: #f5f5f5;
     opacity: 1;
     color: inherit;
-    -webkit-transform: perspective(0px) rotate3d(1, 0, 0, 0deg);
-    transform: perspective(0px) rotate3d(1, 0, 0, 0deg);
+    perspective: 0;
+    -webkit-transform: perspective(0) rotate3d(1, 0, 0, 0);
+    transform: rotate3d(1, 0, 0, 0);
     z-index: 2;
 }
 .rotating-item.next {
     background-color: #f5f5f5;
-    -webkit-transform: perspective(100px) translate3d(-1px,-13px,0) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(100px) translate3d(-1px,-13px,0) rotate3d(1, 0, 0, 90deg);    
+    perspective: 100px;
+    -webkit-transform: translate3d(-1px,-13px,0) rotate3d(1, 0, 0, 90deg);
+    transform: translate3d(-1px,-13px,0) rotate3d(1, 0, 0, 90deg);    
     opacity: 0;
     z-index: 1;
 }
